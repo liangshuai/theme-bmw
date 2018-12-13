@@ -1,16 +1,10 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="author" content="董沅鑫, yuanxin.me@gmail.com" />
-  <% if(is_home() && page.current > 1){ %>
-    <meta name="robots" content="noindex" />
-  <% } %>
   <%
   var title = page.title;
-
   if (is_archive()){
     title = '归档';
-
     if (is_month()){
       title += ': ' + page.year + '/' + page.month;
     } else if (is_year()){
